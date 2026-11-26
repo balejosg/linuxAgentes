@@ -201,11 +201,11 @@ agy</code></pre>
         <h3 class="text-lg font-bold text-white">⚡ Puesta en marcha en 3 pasos</h3>
         <ol class="list-decimal list-inside space-y-2 text-sm text-slate-300">
           <li>Descarga <code class="text-cyan-300">ArchLinux-Agentes.ova</code> e impórtalo en VirtualBox (<em>Archivo → Importar servicio virtualizado</em>).</li>
-          <li>Opcionalmente, vincula una carpeta local con el nombre <code class="text-cyan-300">trabajo</code> (<em>Automontar</em> y <em>Hacer permanente</em>).</li>
+          <li>Vincula tu carpeta de proyectos de Windows con el nombre <code class="text-cyan-300">trabajo</code> (ver guía abajo).</li>
           <li>Inicia la VM, conéctate por SSH y lanza tu agente:</li>
         </ol>
         <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>ssh -p 2222 usuario@127.0.0.1
-cd ~/trabajo/proyectos
+cd ~/trabajo
 opencode</code></pre>
       </div>
 
@@ -221,6 +221,53 @@ opencode</code></pre>
         <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>./scripts/crear-vm.sh
 # Dentro de la VM:
 sudo bash /tmp/provision.sh</code></pre>
+      </div>
+    </section>
+
+    <!-- Windows Shared Folder Guide -->
+    <section class="bg-slate-900/70 border border-cyan-800/40 rounded-2xl p-6 md:p-8 space-y-5">
+      <div>
+        <h3 class="text-xl font-bold text-white flex items-center gap-2">
+          <span>🪟</span> Cómo compartir tu carpeta de proyectos desde Windows
+        </h3>
+        <p class="text-sm text-slate-400 mt-1">
+          Edita tu código en Windows (con VS Code, Cursor, etc.) y deja que los agentes trabajen sobre esos mismos archivos dentro de la VM en tiempo real.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5 text-sm">
+        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-cyan-400">1. Crea la carpeta en Windows</div>
+          <p class="text-slate-300">
+            Crea (o elige) la carpeta donde guardas tus proyectos en Windows, por ejemplo:
+          </p>
+          <code class="block bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-xs text-cyan-300 break-all">C:\Users\TuUsuario\proyectos</code>
+        </div>
+
+        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-cyan-400">2. Configúrala en VirtualBox</div>
+          <ul class="space-y-1.5 text-slate-300 text-xs leading-relaxed">
+            <li>• Abre <strong>Configuración → Carpetas compartidas</strong> (o <em>Dispositivos → Carpetas compartidas</em> con la VM encendida).</li>
+            <li>• Pulsa <strong>Añadir (+)</strong> y selecciona tu carpeta de Windows.</li>
+            <li>• <strong>Nombre de la carpeta:</strong> <code class="text-cyan-300">trabajo</code> (exacto).</li>
+            <li>• Marca <strong>Automontar</strong> y <strong>Hacer permanente</strong>. Deja <em>Solo lectura</em> desmarcado.</li>
+            <li>• Deja <em>Punto de montaje</em> vacío (la VM usa <code class="text-slate-200">/etc/fstab</code>).</li>
+          </ul>
+        </div>
+
+        <div class="bg-slate-950/70 border border-slate-800 rounded-xl p-4 space-y-2">
+          <div class="text-xs font-bold uppercase tracking-wider text-cyan-400">3. Úsala dentro de la VM</div>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Al arrancar la VM, tu carpeta de Windows aparecerá montada en <code class="text-cyan-300">/home/usuario/trabajo</code>. Si la añadiste en caliente, ejecuta:
+          </p>
+          <pre class="bg-slate-900 border border-slate-800 rounded-lg p-2.5 text-xs text-cyan-300 overflow-x-auto"><code>montar-trabajo
+cd ~/trabajo
+opencode</code></pre>
+        </div>
+      </div>
+
+      <div class="bg-slate-950/60 border border-slate-800 rounded-xl px-4 py-3 text-xs text-slate-400">
+        <strong class="text-slate-200">Consejo para Windows:</strong> si editas scripts <code class="text-cyan-300">.sh</code> desde Windows, configura los finales de línea en <strong>LF</strong> (no CRLF) en tu editor o ejecuta <code class="text-cyan-300">git config --global core.autocrlf input</code> para evitar errores de formato en Linux.
       </div>
     </section>
 

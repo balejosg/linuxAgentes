@@ -16,17 +16,14 @@
 
 ---
 
-## 📁 CARPETA COMPARTIDA CON EL ANFITRIÓN (`~/trabajo`)
+## 📁 CARPETA COMPARTIDA CON WINDOWS (`~/trabajo`)
 
-Para editar tus scripts o proyectos cómodamente con tu editor en tu equipo real:
-1. En el menú de VirtualBox: **Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias...**
-2. Añade tu carpeta local, dale de nombre exactamente: `trabajo`
-3. Marca: **Automontar** y **Hacer permanente**.
-4. En la consola de la VM escribe:
-   ```bash
-   montar-trabajo
-   ```
-   Tus archivos estarán sincronizados en tiempo real dentro de `/home/usuario/trabajo/`.
+Para editar tus scripts o proyectos cómodamente en Windows (con VS Code, etc.):
+1. Crea o elige tu carpeta en Windows (por ejemplo, `C:\Users\TuUsuario\proyectos`).
+2. En VirtualBox: **Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias...**
+3. Pulsa **Añadir (+)**, selecciona tu carpeta de Windows y dale de nombre exactamente: `trabajo`
+4. Marca **Automontar** y **Hacer permanente** (deja *Solo lectura* desmarcado y *Punto de montaje* vacío).
+5. En la consola de la VM se montará en `/home/usuario/trabajo` (o escribe `montar-trabajo` si la añadiste con la VM encendida).
 
 ---
 

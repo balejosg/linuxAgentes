@@ -51,13 +51,19 @@ El aprovisionamiento ejecuta `pacman -Syu` completo e instala:
 
 ---
 
-## 📁 Cómo vincular tu carpeta local de trabajo
+## 📁 Cómo vincular tu carpeta de proyectos desde Windows
 
-1. En VirtualBox: **Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias...**
-2. Añade (+) la carpeta de tu ordenador real donde guardas tus proyectos.
-3. Nombre de la carpeta: **`trabajo`**
-4. Marca: **Automontar** y **Hacer permanente**.
-5. Al arrancar la VM se montará sola en `~/trabajo` (o escribe `montar-trabajo` en la terminal).
+Para editar tus proyectos cómodamente en Windows (con VS Code, Cursor, etc.) y que los agentes trabajen sobre ellos en tiempo real dentro de la VM:
+
+1. Crea o elige tu carpeta de proyectos en Windows, por ejemplo: `C:\Users\TuUsuario\proyectos`.
+2. En VirtualBox abre **Configuración ➡️ Carpetas compartidas** (o con la VM encendida: **Dispositivos ➡️ Carpetas compartidas ➡️ Preferencias...**).
+3. Pulsa **Añadir (+)** y configura:
+   * **Ruta de la carpeta:** `C:\Users\TuUsuario\proyectos`
+   * **Nombre de la carpeta:** **`trabajo`** *(exactamente `trabajo`)*
+   * Marca **Automontar** y **Hacer permanente** (deja *Solo lectura* desmarcado).
+   * Deja *Punto de montaje* vacío.
+4. Al arrancar la VM se montará sola en `/home/usuario/trabajo` (o ejecuta `montar-trabajo` si la añadiste con la VM ya encendida).
+5. Consejo: si editas scripts `.sh` desde Windows, usa finales de línea **LF** en tu editor para evitar errores en Linux.
 
 ---
 
