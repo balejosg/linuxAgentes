@@ -40,7 +40,7 @@ fi
 # 2. Conversión a disco VirtualBox VDI
 if [ ! -f "${VDI_FILE}" ]; then
     echo "🔄 Convirtiendo imagen qcow2 a disco dinámico VDI..."
-    qemu-img convert -O vdi -c "${QCOW_FILE}" "${VDI_FILE}"
+    qemu-img convert -O vdi "${QCOW_FILE}" "${VDI_FILE}"
     VBoxManage modifymedium disk "${VDI_FILE}" --resize "${DISK_SIZE_MB}" || true
 else
     echo "✓ Disco VDI ya existente: ${VDI_FILE}"

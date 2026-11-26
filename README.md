@@ -2,6 +2,11 @@
 
 Máquina virtual de **Arch Linux** preconfigurada y actualizada para desarrollo, administración de sistemas y trabajo con **agentes de inteligencia artificial** en terminal (`opencode` v2, `agy`, `herdr`).
 
+## 🚀 Enlaces y Descargas
+* 🌐 **Página Web / GitHub Pages**: [https://balejosg.github.io/linuxAgentes/](https://balejosg.github.io/linuxAgentes/)
+* 📦 **Descarga directa (.ova, ~1.8 GB)**: [ArchLinux-Agentes.ova (v1.0.0)](https://github.com/balejosg/linuxAgentes/releases/download/v1.0.0/ArchLinux-Agentes.ova)
+  * **Checksum SHA-256**: `c9073fb7dcff2a342624cba2dde915b4857a33634bd93a7e639c71a19658be34`
+
 ---
 
 ## 🔑 Credenciales y Mapeo de Puertos NAT

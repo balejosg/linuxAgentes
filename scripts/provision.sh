@@ -34,6 +34,7 @@ timedatectl set-timezone Europe/Madrid || true
 
 # 2. Actualización completa del sistema y paquetes base
 echo "[2/8] Actualizando todo el sistema e instalando paquetes base..."
+pacman -Sy --noconfirm archlinux-keyring
 pacman -Syu --noconfirm
 pacman -S --noconfirm --needed \
     base-devel git curl wget rsync jq vim nano tmux zsh \
@@ -83,7 +84,9 @@ fi
 if ! command -v herdr >/dev/null 2>&1; then
     echo "Instalando Herdr CLI..."
     curl -fsSL https://herdr.dev/install.sh | bash || true
-    if [ -f /root/.herdr/bin/herdr ]; then
+    if [ -f /root/.local/bin/herdr ]; then
+        install -m 755 /root/.local/bin/herdr /usr/local/bin/herdr
+    elif [ -f /root/.herdr/bin/herdr ]; then
         install -m 755 /root/.herdr/bin/herdr /usr/local/bin/herdr
     fi
 fi
