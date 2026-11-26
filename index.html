@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arch Linux VM (Edición Agentes IA) - Entorno VirtualBox</title>
+  <title>Arch Linux VM (Edición Agentes IA) — Entorno VirtualBox para Trabajar con Agentes</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,30 +27,40 @@
             <h1 class="font-bold text-lg leading-tight text-white group-hover:text-cyan-300 transition">Arch Linux VM</h1>
             <span class="text-[10px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-800/80 px-2 py-0.5 rounded-full">Agentes IA</span>
           </div>
-          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • OpenCode v2, Docker &amp; Herramientas CLI</p>
+          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • OpenCode v2, Herdr, Antigravity &amp; Docker</p>
         </div>
       </a>
+      <div class="flex items-center gap-2 md:gap-3">
+        <a href="https://github.com/balejosg/linuxAgentes/releases/tag/v1.0.0" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg bg-cyan-950/80 border border-cyan-500/40 text-cyan-200 hover:text-white hover:border-cyan-400 transition">
+          Release v1.0.0
+        </a>
+        <a href="https://github.com/balejosg/linuxAgentes" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white transition flex items-center gap-1.5">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+          GitHub
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <main class="max-w-4xl mx-auto px-6 py-12">
-    <div class="text-center space-y-4">
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- Hero & Download -->
+    <section class="text-center space-y-5">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
         <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
-        Arch Linux Actualizado • Docker, OpenCode v2, Herdr &amp; Antigravity CLI
+        Versión 1.0.0 • Arch Linux Actualizado • OpenCode v2.4.2 • Docker 29
       </div>
       <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
-        Máquina Virtual <br/>
-        <span class="bg-gradient-to-r from-cyan-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent">Arch Linux Agentes IA</span>
+        Tu Laboratorio Aislado para <br/>
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent">Trabajar con Agentes de IA</span>
       </h2>
       <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-        Entorno ligero y actualizado de <strong>Arch Linux</strong> para desarrollo, administración de sistemas y flujos de trabajo asistidos por <strong>agentes de IA en terminal</strong> como OpenCode v2, Herdr y Antigravity CLI.
+        Una máquina virtual de <strong>Arch Linux</strong> ligera, lista para importar en VirtualBox y pensada para ejecutar <strong>agentes de programación autónomos en terminal</strong> (<strong>OpenCode v2</strong>, <strong>Herdr</strong> y <strong>Antigravity CLI</strong>) con total seguridad, Docker y carpeta compartida con tu equipo anfitrión.
       </p>
 
-      <!-- Primary Download Card -->
-      <div class="pt-6 max-w-xl mx-auto">
-        <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border border-cyan-700/50 rounded-3xl p-6 shadow-2xl shadow-cyan-950/50 space-y-5">
+      <!-- Download Card -->
+      <div class="pt-4 max-w-2xl mx-auto">
+        <div class="bg-gradient-to-b from-slate-900 to-slate-900/90 border border-cyan-700/50 rounded-3xl p-6 shadow-2xl shadow-cyan-950/50 space-y-4">
           <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
             <a href="https://github.com/balejosg/linuxAgentes/releases/download/v1.0.0/ArchLinux-Agentes.ova"
                class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 font-bold text-white shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 transition transform hover:-translate-y-0.5 active:translate-y-0 text-lg">
@@ -58,59 +68,167 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
               </svg>
               Descargar ArchLinux-Agentes.ova
-              <span class="text-xs bg-black/20 px-2.5 py-1 rounded-full font-medium ml-1">1.8 GB</span>
+              <span class="text-xs bg-black/25 px-2.5 py-1 rounded-full font-medium">1.8 GB</span>
             </a>
           </div>
-          <div class="text-[11px] text-slate-400 font-mono break-all bg-slate-950/70 border border-slate-800 rounded-xl px-3 py-2">
+          <div class="text-[11px] text-slate-400 font-mono break-all bg-slate-950/80 border border-slate-800 rounded-xl px-3 py-2">
             SHA-256: c9073fb7dcff2a342624cba2dde915b4857a33634bd93a7e639c71a19658be34
           </div>
-          <div class="flex items-center justify-center gap-4 text-xs text-slate-400">
-            <a href="https://github.com/balejosg/linuxAgentes" target="_blank" rel="noopener noreferrer" class="hover:text-cyan-300 transition">Repositorio en GitHub</a>
-            <span>•</span>
+          <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-slate-400">
             <span>VirtualBox 7.x compatible</span>
+            <span>•</span>
+            <span>Teclado español (<code class="text-cyan-300">es_ES.UTF-8</code>)</span>
+            <span>•</span>
+            <span>Usuario y clave: <code class="text-cyan-300">usuario</code></span>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Credentials & Ports -->
-    <section class="mt-12 grid md:grid-cols-2 gap-6">
+    <!-- Why a VM for AI Agents -->
+    <section class="space-y-6">
+      <div class="text-center max-w-2xl mx-auto">
+        <h3 class="text-2xl font-bold text-white">¿Por qué usar esta VM con Agentes de IA?</h3>
+        <p class="text-sm text-slate-400 mt-1">Diseñada para dar autonomía a los agentes sin comprometer tu sistema principal.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-2">
+          <div class="text-2xl">🛡️</div>
+          <h4 class="font-bold text-white">Aislamiento Real (Sandbox)</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Los agentes pueden instalar paquetes, levantar contenedores Docker, abrir puertos o ejecutar scripts destructivos dentro de la VM sin tocar tu máquina real.
+          </p>
+        </div>
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-2">
+          <div class="text-2xl">📁</div>
+          <h4 class="font-bold text-white">Flujo Híbrido Host ↔ VM</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Edita tu código cómodamente en tu editor del anfitrión dentro de la carpeta compartida <code class="text-cyan-300">~/trabajo</code> y deja que los agentes compilen, prueben y desplieguen dentro de Arch Linux.
+          </p>
+        </div>
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-2">
+          <div class="text-2xl">📐</div>
+          <h4 class="font-bold text-white">Contexto Unificado (<code class="text-cyan-300">AGENTS.md</code>)</h4>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Todos los agentes preconfigurados comparten directrices claras de ingeniería, contenedores limpios, Bash seguro y diagnóstico directo de sistemas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Included AI Agents -->
+    <section class="space-y-6">
+      <div>
+        <h3 class="text-2xl font-bold text-white">Agentes de IA Preinstalados y Configurados</h3>
+        <p class="text-sm text-slate-400 mt-1">Listos para ejecutarse desde la terminal nada más arrancar la máquina.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-5">
+        <div class="bg-slate-900/70 border border-cyan-800/40 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-lg text-white">OpenCode v2</span>
+            <span class="text-xs font-mono bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-800/60">v2.4.2</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            Agente de código abierto para terminal instalado desde el canal oficial v2 (<code class="text-xs text-slate-300">opencode.ai/v2/install</code>) en <code class="text-xs text-slate-300">/usr/local/bin/opencode</code>.
+          </p>
+          <pre class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-cyan-300 overflow-x-auto"><code>cd ~/trabajo/proyectos
+opencode</code></pre>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-lg text-white">Herdr CLI</span>
+            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">v0.9.5</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            CLI para gestión y ejecución de flujos con agentes, disponible globalmente en <code class="text-xs text-slate-300">/usr/local/bin/herdr</code>.
+          </p>
+          <pre class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-cyan-300 overflow-x-auto"><code>herdr --version</code></pre>
+        </div>
+
+        <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
+          <div class="flex items-center justify-between">
+            <span class="font-bold text-lg text-white">Antigravity CLI</span>
+            <span class="text-xs font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded-full">agy</span>
+          </div>
+          <p class="text-sm text-slate-400">
+            Reglas del asistente ya instaladas en <code class="text-xs text-slate-300">~/.gemini/antigravity-cli/rules/</code> y <code class="text-xs text-slate-300">~/.gemini/rules/</code>.
+          </p>
+          <pre class="bg-slate-950 border border-slate-800 rounded-xl p-3 text-xs text-cyan-300 overflow-x-auto"><code>paru -S antigravity-cli
+agy</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Details -->
+    <section class="grid md:grid-cols-2 gap-6">
       <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-4">
         <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <span>🔑</span> Credenciales y Acceso
+          <span>🔑</span> Credenciales, Red y Hardware
         </h3>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><strong>Usuario:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code></li>
-          <li><strong>Contraseña:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code></li>
-          <li><strong>SSH:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">ssh -p 2222 usuario@127.0.0.1</code></li>
-          <li><strong>HTTP:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">http://localhost:8080</code></li>
-          <li><strong>Carpeta compartida:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">~/trabajo</code> (<code class="bg-slate-800 px-1.5 py-0.5 rounded">montar-trabajo</code>)</li>
-        </ul>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left text-slate-300">
+            <tbody class="divide-y divide-slate-800">
+              <tr><td class="py-2 font-medium text-slate-400">Usuario / Clave</td><td class="py-2"><code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code> / <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code> (sudo completo)</td></tr>
+              <tr><td class="py-2 font-medium text-slate-400">SSH (NAT 2222→22)</td><td class="py-2"><code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">ssh -p 2222 usuario@127.0.0.1</code></td></tr>
+              <tr><td class="py-2 font-medium text-slate-400">HTTP (NAT 8080→80)</td><td class="py-2"><code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">http://localhost:8080</code></td></tr>
+              <tr><td class="py-2 font-medium text-slate-400">Recursos VM</td><td class="py-2">2 vCPUs, 2048 MB RAM, disco VDI dinámico 40 GB</td></tr>
+              <tr><td class="py-2 font-medium text-slate-400">Localización</td><td class="py-2"><code class="text-slate-200">es_ES.UTF-8</code>, teclado <code class="text-slate-200">es</code>, <code class="text-slate-200">Europe/Madrid</code></td></tr>
+              <tr><td class="py-2 font-medium text-slate-400">Carpeta compartida</td><td class="py-2"><code class="text-cyan-300">/home/usuario/trabajo</code> (<code class="text-slate-200">montar-trabajo</code>)</td></tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
       <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-4">
         <h3 class="text-lg font-bold text-white flex items-center gap-2">
-          <span>🛠️</span> Stack Incluido
+          <span>🛠️</span> Pormenores del Software Incluido
         </h3>
-        <ul class="space-y-2 text-sm text-slate-300">
-          <li><strong>Agentes IA:</strong> OpenCode v2 (<code class="bg-slate-800 px-1.5 py-0.5 rounded">opencode</code>), Herdr (<code class="bg-slate-800 px-1.5 py-0.5 rounded">herdr</code>) y reglas para <code class="bg-slate-800 px-1.5 py-0.5 rounded">agy</code></li>
-          <li><strong>Contenedores:</strong> Docker y Docker Compose</li>
-          <li><strong>Desarrollo:</strong> Git, base-devel, Python 3, zsh, tmux, ripgrep, fd, jq</li>
-          <li><strong>Redes y Sistema:</strong> nmap, tcpdump, iperf3, bind, socat, htop, glances</li>
-          <li><strong>VirtualBox:</strong> Guest Additions activo y teclado español (<code class="bg-slate-800 px-1.5 py-0.5 rounded">es</code>)</li>
+        <ul class="space-y-2.5 text-sm text-slate-300">
+          <li><strong>Sistema actualizado:</strong> <code class="text-cyan-300">pacman -Syu</code> completo sobre Arch Linux oficial.</li>
+          <li><strong>Contenedores:</strong> Docker (<code class="text-slate-200">29.10.1</code>) y Docker Compose habilitados con el usuario en el grupo <code class="text-slate-200">docker</code>.</li>
+          <li><strong>Desarrollo y CLI:</strong> <code class="text-slate-200">base-devel</code>, <code class="text-slate-200">git</code>, <code class="text-slate-200">vim</code>, <code class="text-slate-200">nano</code>, <code class="text-slate-200">tmux</code>, <code class="text-slate-200">zsh</code>, <code class="text-slate-200">ripgrep</code>, <code class="text-slate-200">fd</code>, <code class="text-slate-200">tree</code>, <code class="text-slate-200">jq</code>, <code class="text-slate-200">rsync</code>.</li>
+          <li><strong>Python y Monitorización:</strong> <code class="text-slate-200">python</code>, <code class="text-slate-200">pip</code>, <code class="text-slate-200">psutil</code>, <code class="text-slate-200">requests</code>, <code class="text-slate-200">rich</code>, <code class="text-slate-200">htop</code>, <code class="text-slate-200">glances</code>.</li>
+          <li><strong>Diagnóstico de Red:</strong> <code class="text-slate-200">nmap</code>, <code class="text-slate-200">tcpdump</code>, <code class="text-slate-200">iperf3</code>, <code class="text-slate-200">bind</code> (<code class="text-slate-200">dig</code>), <code class="text-slate-200">socat</code>, <code class="text-slate-200">traceroute</code>, <code class="text-slate-200">iproute2</code>.</li>
+          <li><strong>VirtualBox Guest Additions:</strong> <code class="text-slate-200">virtualbox-guest-utils</code> activo (<code class="text-slate-200">vboxservice.service</code>) y usuario en <code class="text-slate-200">vboxsf</code>.</li>
         </ul>
       </div>
     </section>
 
-    <!-- Quick Setup -->
-    <section class="mt-8 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
-      <h3 class="text-lg font-bold text-white">🚀 Construcción desde cero</h3>
-      <p class="text-sm text-slate-400">Ejecuta los scripts del repositorio para crear y aprovisionar la máquina virtual:</p>
-      <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>./scripts/crear-vm.sh
-# Dentro de la VM (como root o con sudo):
-sudo ./provision.sh</code></pre>
+    <!-- Quick Start & Reproducibility -->
+    <section class="grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
+        <h3 class="text-lg font-bold text-white">⚡ Puesta en marcha en 3 pasos</h3>
+        <ol class="list-decimal list-inside space-y-2 text-sm text-slate-300">
+          <li>Descarga <code class="text-cyan-300">ArchLinux-Agentes.ova</code> e impórtalo en VirtualBox (<em>Archivo → Importar servicio virtualizado</em>).</li>
+          <li>Opcionalmente, vincula una carpeta local con el nombre <code class="text-cyan-300">trabajo</code> (<em>Automontar</em> y <em>Hacer permanente</em>).</li>
+          <li>Inicia la VM, conéctate por SSH y lanza tu agente:</li>
+        </ol>
+        <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>ssh -p 2222 usuario@127.0.0.1
+cd ~/trabajo/proyectos
+opencode</code></pre>
+      </div>
+
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
+        <h3 class="text-lg font-bold text-white">🔧 Reproducir o personalizar desde cero</h3>
+        <p class="text-sm text-slate-400">
+          Todo el entorno se genera de forma automatizada mediante los dos scripts incluidos en el repositorio:
+        </p>
+        <ul class="space-y-1.5 text-sm text-slate-300">
+          <li>• <code class="text-cyan-300">scripts/crear-vm.sh</code>: Descarga la imagen oficial <code class="text-slate-200">Arch-Linux-x86_64-basic.qcow2</code>, la convierte a VDI y registra la VM en VirtualBox.</li>
+          <li>• <code class="text-cyan-300">scripts/provision.sh</code>: Actualiza el sistema (<code class="text-slate-200">pacman -Syu</code>), configura idioma, usuario, Docker, OpenCode v2, Herdr, reglas <code class="text-slate-200">AGENTS.md</code> y <code class="text-slate-200">/etc/fstab</code>.</li>
+        </ul>
+        <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>./scripts/crear-vm.sh
+# Dentro de la VM:
+sudo bash /tmp/provision.sh</code></pre>
+      </div>
     </section>
+
   </main>
+
+  <footer class="border-t border-slate-800/80 py-6 text-center text-xs text-slate-500">
+    <p>Arch Linux VM (Edición Agentes IA) • <a href="https://github.com/balejosg/linuxAgentes" class="text-cyan-400 hover:underline">github.com/balejosg/linuxAgentes</a></p>
+  </footer>
 
 </body>
 </html>
