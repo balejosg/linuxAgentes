@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Script de montaje rápido de la carpeta compartida 'trabajo' en Arch Linux VM
+TARGET_USER="${SUDO_USER:-${USER}}"
+MOUNT_POINT="/home/${TARGET_USER}/trabajo"
+SHARE_NAME="trabajo"
+TARGET_UID="$(id -u "${TARGET_USER}")"
+TARGET_GID="$(id -g "${TARGET_USER}")"
+
+mkdir -p "${MOUNT_POINT}"
+
+if mountpoint -q "${MOUNT_POINT}"; then
+    echo "✓ La carpeta compartida ya está montada en ${MOUNT_POINT}"
+    ls -la "${MOUNT_POINT}"
+    exit 0
+fi
+
+echo "Montando carpeta compartida de VirtualBox (${SHARE_NAME}) en ${MOUNT_POINT}..."
+
+if sudo mount -t vboxsf -o "rw,uid=${TARGET_UID},gid=${TARGET_GID},dmode=755,fmode=644" "${SHARE_NAME}" "${MOUNT_POINT}" 2>/dev/null; then
+    echo "✓ Carpeta compartida montada con éxito en ${MOUNT_POINT}"
+    ls -la "${MOUNT_POINT}"
+else
+    echo "⚠️ No se pudo montar automáticamente la carpeta compartida."
+    echo "Por favor, verifica que has añadido la carpeta en VirtualBox con el nombre exacto: '${SHARE_NAME}'"
+    echo "Ruta: Dispositivos -> Carpetas compartidas -> Preferencias -> Añadir (+)"
+    exit 1
+fi

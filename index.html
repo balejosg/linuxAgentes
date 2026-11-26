@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arch Linux VM (Edición Agentes IA) - Entorno VirtualBox</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    code, pre { font-family: 'Fira Code', monospace; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen antialiased selection:bg-cyan-500 selection:text-white">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800/80 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="index.html" class="flex items-center space-x-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition">
+          🤖
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-bold text-lg leading-tight text-white group-hover:text-cyan-300 transition">Arch Linux VM</h1>
+            <span class="text-[10px] font-bold bg-cyan-950 text-cyan-400 border border-cyan-800/80 px-2 py-0.5 rounded-full">Agentes IA</span>
+          </div>
+          <p class="text-xs text-cyan-400 font-medium">VirtualBox Appliance (.ova) • OpenCode v2, Docker &amp; Herramientas CLI</p>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <div class="text-center space-y-4">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/60 text-cyan-300 text-xs font-medium">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+        Arch Linux Actualizado • Docker, OpenCode v2, Herdr &amp; Antigravity CLI
+      </div>
+      <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white">
+        Máquina Virtual <br/>
+        <span class="bg-gradient-to-r from-cyan-400 via-blue-300 to-indigo-400 bg-clip-text text-transparent">Arch Linux Agentes IA</span>
+      </h2>
+      <p class="text-slate-400 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+        Entorno ligero y actualizado de <strong>Arch Linux</strong> para desarrollo, administración de sistemas y flujos de trabajo asistidos por <strong>agentes de IA en terminal</strong> como OpenCode v2, Herdr y Antigravity CLI.
+      </p>
+    </div>
+
+    <!-- Credentials & Ports -->
+    <section class="mt-12 grid md:grid-cols-2 gap-6">
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span>🔑</span> Credenciales y Acceso
+        </h3>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><strong>Usuario:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code></li>
+          <li><strong>Contraseña:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">usuario</code></li>
+          <li><strong>SSH:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">ssh -p 2222 usuario@127.0.0.1</code></li>
+          <li><strong>HTTP:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">http://localhost:8080</code></li>
+          <li><strong>Carpeta compartida:</strong> <code class="bg-slate-800 px-2 py-0.5 rounded text-cyan-300">~/trabajo</code> (<code class="bg-slate-800 px-1.5 py-0.5 rounded">montar-trabajo</code>)</li>
+        </ul>
+      </div>
+
+      <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-4">
+        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+          <span>🛠️</span> Stack Incluido
+        </h3>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><strong>Agentes IA:</strong> OpenCode v2 (<code class="bg-slate-800 px-1.5 py-0.5 rounded">opencode</code>), Herdr (<code class="bg-slate-800 px-1.5 py-0.5 rounded">herdr</code>) y reglas para <code class="bg-slate-800 px-1.5 py-0.5 rounded">agy</code></li>
+          <li><strong>Contenedores:</strong> Docker y Docker Compose</li>
+          <li><strong>Desarrollo:</strong> Git, base-devel, Python 3, zsh, tmux, ripgrep, fd, jq</li>
+          <li><strong>Redes y Sistema:</strong> nmap, tcpdump, iperf3, bind, socat, htop, glances</li>
+          <li><strong>VirtualBox:</strong> Guest Additions activo y teclado español (<code class="bg-slate-800 px-1.5 py-0.5 rounded">es</code>)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Quick Setup -->
+    <section class="mt-8 bg-slate-900/70 border border-slate-800 rounded-2xl p-6 space-y-3">
+      <h3 class="text-lg font-bold text-white">🚀 Construcción desde cero</h3>
+      <p class="text-sm text-slate-400">Ejecuta los scripts del repositorio para crear y aprovisionar la máquina virtual:</p>
+      <pre class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs text-cyan-300 overflow-x-auto"><code>./scripts/crear-vm.sh
+# Dentro de la VM (como root o con sudo):
+sudo ./provision.sh</code></pre>
+    </section>
+  </main>
+
+</body>
+</html>
